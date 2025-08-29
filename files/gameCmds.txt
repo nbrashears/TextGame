@@ -1,0 +1,56 @@
+[help]
+"
+*NOTE* All commands must be typed in lowercase as they are case sensitive. They appear in uppercase purely for readability
+
+<cyan>HELP</cyan> - Lists all available commands
+
+<cyan>LOOK [OPTION]</cyan> - Examine something (or your surroundings)
+
+<cyan>TAKE/GET [OPTION]</cyan> - Pick up an object
+
+<cyan>SAY [OPTION]</cyan> - Say something
+
+<cyan>WALK/MOVE [OPTION]</cyan> - Move in any of the eight cardinal directions (NW/N/NE/E/SE/S/SW/W)
+
+<cyan>EQUIP [OPTIONS]</cyan> - Equip a weapon, tool, or piece of armor
+
+<cyan>UNEQUIP [OPTION]</cyan> - Unequip a weapon, tool, or piece of armor
+
+<cyan>USE [OPTION]</cyan> - Use an in-game object
+
+<cyan>FIRE AT [OPTION]</cyan> - Fires weapon at the specified target if a firearm is equipped
+
+<cyan>EXIT</cyan> - Ends the game
+"
+
+[items]
+Computer:
+    name = Radio Frequency Receiver
+    description = A large metal box with numerous dials and knobs for various settings. In the center of its face lies a large dial for adjusting the receiving frequency.
+    quantity = 1;
+    onUse(); // Opens up a unique control menu that allows the player to adjust the frequency and read transcribed messages
+
+[gameCharacters]
+Player:
+    name = ""
+
+GameCharacter:
+    name = "John Smith"
+    description = "Just a swell guy"
+    currentLocation;
+    inventory;
+    void interact() {  }
+
+[locations]
+Location:
+    name = Radio Surveillance Room
+    description = The room where radio surveillance takes place
+    items = [Radio Frequency Receiver]
+    npcs = [John Smith]
+
+
+
+
+
+
+
